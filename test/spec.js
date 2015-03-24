@@ -20,4 +20,8 @@ describe('todoApp homepage', function() {
     expect(browser.isElementPresent(by.id("sausages_button"))).toBe(true);
   });
 
+  it('should display a score', function(){
+    expect(browser.isElementPresent(by.id("score"))).toBe(true);
+  });
+
 });

@@ -23,5 +23,15 @@ describe('legsOrSausagesController', function() {
     expect(scope.photos[0].sausage).toEqual(false)
   });
 
+  it('should increase the score if the user chooses the correct answer', function(){
+    scope.legs();
+    expect(scope.score).toEqual(1);
+  });
+
+  it('should know if a user chooses the incorrect answer', function(){
+    scope.sausage();
+    expect(scope.score).toEqual(-1);
+  });
+
 });
 

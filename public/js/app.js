@@ -3,9 +3,8 @@ var legsorSausages = angular.module('LegsorSausages', ['ngResource']);
 legsorSausages.controller('legsOrSausagesController', function($scope) {
 
   var i = 0;
-  // var score = 0;
-  $scope.score = 0;
 
+  $scope.score = 0;
   $scope.view = 0;
   $scope.photos = [{
     name: "image1",
@@ -16,11 +15,19 @@ legsorSausages.controller('legsOrSausagesController', function($scope) {
     name: "image2",
     url: "http://i8.cdnds.net/13/34/450x450/tumblr_mrfiwmaqqj1sftuuto1_500.jpg",
     sausage: true
-  }]
+  },
+  {
+    name: "image3",
+    url: "https://40.media.tumblr.com/9441faef3cd5be727c2bc189255975df/tumblr_nkj4a1epoC1rzg2epo1_500.jpg",
+    sausage: true
+   }]
 
   $scope.showPhoto = function(){
+    if($scope.photos.length > i){
     return $scope.photos[i].url;
-
+  }else{
+    return "http://bavatuesdays.com/files/2014/12/Game_Over.png"
+  }
   };
 
   $scope.changePhoto = function(){
@@ -33,6 +40,7 @@ legsorSausages.controller('legsOrSausagesController', function($scope) {
     }else{
       $scope.score -=1;
     }
+    $scope.changePhoto();
    };
 
    $scope.legs = function(){

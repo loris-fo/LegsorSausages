@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>Legs or Sausages</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/app_jquery.js"></script>
   </head>
   <body ng-controller = "legsOrSausagesController">
 
@@ -20,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Legs or sausages?</a>
+          <a class="navbar-brand" href="#">Legs Or Sausages</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -38,22 +40,21 @@
     </div>
 
       <div class="starter-template" align="center">
-        <h1>Makerthon App</h1>
-          {{greeting}}
-
-
+        <h1>Legs Or Sausages</h1>
         <br><br>
 
         <ul>
-          <img id="main_image" src="{{showPhoto()}}">
+          <img id="main_image" src="{{showPhoto()}}" height="350" width="350">
         </ul>
-        <button ng-click="changePhoto()">Click</button>
         <button type="button" ng-click="legs()" class="btn btn-primary" id="legs_button">Legs</button>
         <button type="button" class="btn btn-primary" id="sausages_button" ng-click="sausage()">Sausages</button>
-  {{score}}
+
+        <div id="score">
+         {{score}}
+        </div>
       </div>
 
-      </div>
+
   </body>
 
   </html>
