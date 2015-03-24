@@ -11,12 +11,16 @@ describe('legsOrSausagesController', function() {
   }));
 
   it('should have two images that a user can vote on', function(){
-    expect(scope.images.length).toEqual(2);
+    expect(scope.photos.length).toEqual(2);
   });
 
   it('should show a new image after user has voted', function(){
-    // scope.vote();
-    expect(scope.images[1].name).toEqual("Photo2");
+    scope.changePhoto();
+    expect(scope.showPhoto()).toEqual(scope.photos[1].url);
+  });
+
+  it('each image should have a sausage key', function(){
+    expect(scope.photos[0].sausage).toEqual(false)
   });
 
 });
