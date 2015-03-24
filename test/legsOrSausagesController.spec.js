@@ -16,7 +16,8 @@ describe('legsOrSausagesController', function() {
 
   it('should show a new image after user has voted', function(){
     // scope.vote();
-    expect(scope.images[1].name).toEqual("Photo2")
+    expect(scope.images[1].name).toEqual("Photo2");
   });
 
 });
+
