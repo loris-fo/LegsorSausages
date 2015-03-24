@@ -1,5 +1,5 @@
 describe('todoApp homepage', function() {
-  
+
   beforeEach(function() {
     browser.get('http://localhost:3000');
   });
@@ -12,12 +12,12 @@ describe('todoApp homepage', function() {
     expect(browser.isElementPresent(by.id("main_image"))).toBe(true);
   });
 
-    it("should have a join button", function() {
-    expect(browser.isElementPresent(by.id("join_button"))).toBe(true);
+    it("should have a legs button", function() {
+    expect(browser.isElementPresent(by.id("legs_button"))).toBe(true);
   });
 
-  it("should have a log in button", function(){
-    expect(browser.isElementPresent(by.id("login_button"))).toBe(true);
+  it("should have a sausages button", function(){
+    expect(browser.isElementPresent(by.id("sausages_button"))).toBe(true);
   });
 
 });
