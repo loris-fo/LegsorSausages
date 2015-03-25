@@ -1,60 +1,27 @@
 <!doctype html>
-<html lang="en" ng-app="LegsorSausages">
+<html lang="en" >
   <head>
     <meta charset="utf-8">
     <title>Legs or Sausages</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<!--     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
     <link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/app_jquery.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
   </head>
-  <body ng-controller = "legsOrSausagesController">
-
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Legs Or Sausages</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-      <br><br><br>
-      </div>
-
+<body>
+  <div id="container">
+    <div class="buddy" style="display: block;"><div class="avatar"  style="display: block; background-image: url(http://blogs.ocweekly.com/stickaforkinit/hot-dog-legs-2.jpg)"></div></div>
+    <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://i8.cdnds.net/13/34/450x450/tumblr_mrfiwmaqqj1sftuuto1_500.jpg)"></div></div>
+    <div class="buddy"><div class="avatar" style="display: block; background-image: url(https://40.media.tumblr.com/9441faef3cd5be727c2bc189255975df/tumblr_nkj4a1epoC1rzg2epo1_500.jpg)"></div></div>
     </div>
-
-      <div class="starter-template" align="center">
-        <h1>Legs Or Sausages</h1>
-        <br><br>
-
-        <ul>
-          <img id="main_image" src="{{showPhoto()}}" height="350" width="350">
-        </ul>
-        <button type="button" ng-click="legs()" class="btn btn-primary" id="legs_button">Legs</button>
-        <button type="button" class="btn btn-primary" id="sausages_button" ng-click="sausage()">Sausages</button>
-
-        <div id="score">
-         {{score}}
-        </div>
-      </div>
-
-
-  </body>
+  </div>
+</body>
 
   </html>

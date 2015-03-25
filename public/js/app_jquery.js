@@ -1,19 +1,46 @@
+// $(document).ready(function(){
+
+// $("#legs_button").click(function(){
+//     $('#main_image').fadeToggle( 0, function() {
+//        $('#main_image').fadeIn( 2000, function() {
+
+//   });
+//   });
+// });
+
+// $("#sausages_button").click(function(){
+//     $('#main_image').fadeToggle( 0, function() {
+//        $('#main_image').fadeIn( 2000, function() {
+
+//   });
+//   });
+// });
+
+// });
 $(document).ready(function(){
 
-$("#legs_button").click(function(){
-    $('#main_image').fadeToggle( 0, function() {
-       $('#main_image').fadeIn( 2000, function() {
+    $(".buddy").on("swiperight",function(){
+      $(this).addClass('rotate-left').delay(700).fadeOut(1);
+      $('.buddy').find('.status').remove();
 
-  });
-  });
-});
+      $(this).append('<div class="status like">Sausages!</div>');
+      if ( $(this).is(':last-child') ) {
+        $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
+       } else {
+          $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
+       }
+    });
 
-$("#sausages_button").click(function(){
-    $('#main_image').fadeToggle( 0, function() {
-       $('#main_image').fadeIn( 2000, function() {
+   $(".buddy").on("swipeleft",function(){
+    $(this).addClass('rotate-right').delay(700).fadeOut(1);
+    $('.buddy').find('.status').remove();
+    $(this).append('<div class="status dislike">Legs!</div>');
 
+    if ( $(this).is(':last-child') ) {
+     $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
+     } else {
+        $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
+    }
   });
-  });
-});
 
 });
