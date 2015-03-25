@@ -13,7 +13,7 @@
   -ms-user-select: none;
   user-select: none;
 }
-.buddy {
+.frame {
   display: none;
   background: #fff;
   border-radius: 10px;
@@ -41,7 +41,7 @@
   margin-left: -400px;
   cursor: w-resize;
 }
-.avatar {
+.pictures {
   background: #222;
   width: 340px;
   height: 340px;
@@ -52,7 +52,7 @@
   background-position: center;
  background-repeat: no-repeat;
 }
-.like {
+.sausages {
   border-radius: 5px;
   padding: 5px 10px;
   border: 2px solid green;
@@ -64,7 +64,7 @@
   right: 40px;
   text-shadow: none;
 }
-.dislike {
+.legs {
   border-radius: 5px;
   padding: 5px 10px;
   border: 2px solid red;
@@ -75,4 +75,7 @@
   top: 50px;
   left: 40px;
   text-shadow: none;
+}
+.title {
+  text-align: center;
 }

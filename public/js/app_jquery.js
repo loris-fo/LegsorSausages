@@ -19,25 +19,25 @@
 // });
 $(document).ready(function(){
 
-    $(".buddy").on("swiperight",function(){
+    $(".frame").on("swiperight",function(){
       $(this).addClass('rotate-left').delay(700).fadeOut(1);
-      $('.buddy').find('.status').remove();
+      $('.frame').find('.status').remove();
 
-      $(this).append('<div class="status like">Sausages!</div>');
+      $(this).append('<div class="status sausages">Sausages!</div>');
       if ( $(this).is(':last-child') ) {
-        $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
+        $('.frame:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
        } else {
           $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
        }
     });
 
-   $(".buddy").on("swipeleft",function(){
+   $(".frame").on("swipeleft",function(){
     $(this).addClass('rotate-right').delay(700).fadeOut(1);
-    $('.buddy').find('.status').remove();
-    $(this).append('<div class="status dislike">Legs!</div>');
+    $('.frame').find('.status').remove();
+    $(this).append('<div class="status legs">Legs!</div>');
 
     if ( $(this).is(':last-child') ) {
-     $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
+     $('.frame:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
      } else {
         $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
     }
