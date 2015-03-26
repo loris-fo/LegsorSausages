@@ -18,23 +18,26 @@
   </head>
 <body ng-controller="legsOrSausagesController">
   <h1 class="title">Legs or sausages?</h1>
-  {{}}
 
   <div id="container">
   <div id="phone">
-  <div class="frame" style="display: block;">
-  <div class="pictures"  style="display: block; background-image: url(http://blogs.ocweekly.com/stickaforkinit/hot-dog-legs-2.jpg)">
-
+  <div class="frame" style="display: block;" ng-repeat="photo in photos.slice().reverse()" >
+  <div class="pictures" style="display: block; background-image: url({{photo.url}})">
   </div>
   </div>
 
-    <div class="frame" style="display: block;"><div class="pictures"  style="display: block; background-image: url(http://blogs.ocweekly.com/stickaforkinit/hot-dog-legs-2.jpg)"></div></div>
-    <div class="frame"><div class="pictures" style="display: block; background-image: url(http://i8.cdnds.net/13/34/450x450/tumblr_mrfiwmaqqj1sftuuto1_500.jpg)"></div></div>
+
+<!--
+    <div class="frame" style="display: block;">
+    <div class="pictures"  style="display: block; background-image: url(http://blogs.ocweekly.com/stickaforkinit/hot-dog-legs-2.jpg)"></div>
+    </div>
+    <div class="frame"><div class="pictures" style="display: block; background-image: url(http://i8.cdnds.net/13/34/450x450/tumblr_mrfiwmaqqj1sftuuto1_500.jpg)"></div></div> -->
     <!-- <div class="frame"><div class="pictures" style="display: block; background-image: url(https://40.media.tumblr.com/9441faef3cd5be727c2bc189255975df/tumblr_nkj4a1epoC1rzg2epo1_500.jpg)"></div></div> -->
     </div>
   </div>
   </div>
   <br>
+  <button id="seb" ng-click="sausage()">click</button>
 </body>
 
   </html>

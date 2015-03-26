@@ -54,4 +54,10 @@ legsorSausages.controller('legsOrSausagesController', function($scope) {
     $scope.changePhoto();
    };
 
+   legsorSausages.filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse();
+  };
+});
+
 });
