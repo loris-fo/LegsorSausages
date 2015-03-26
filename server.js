@@ -2,7 +2,7 @@ var express = require('express');
 var server = express();
 var path = require('path');
 
-server.set('port', (process.env.PORT || 5000))
+server.set('port', (process.env.PORT || 3000))
 
 server.use(express.static(__dirname + '/public'));
 server.use('/bower_components', express.static(__dirname + '/bower_components'));
