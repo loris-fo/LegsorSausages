@@ -36,6 +36,10 @@ legsorSausages.controller('legsOrSausagesController', function($scope) {
     i += 1;
    };
 
+   $scope.reset = function(){
+    i = 0;
+   };
+
    $scope.sausage = function(){
     if($scope.photos[i].sausage === true){
       $scope.score +=1;

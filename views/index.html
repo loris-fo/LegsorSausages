@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Legs or Sausages</title>
-    <link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -11,33 +10,73 @@
     <script src="/js/app1.js"></script>
     <script src="/js/app_jquery.js"></script>
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </head>
 <body ng-controller="legsOrSausagesController">
-  <h1 class="title">Legs or sausages?</h1>
+  <nav class="" role="navigation">
+    <div class="container">
 
+      <div class="nav-wrapper"><a id="logo-container" class="brand-logo">legs or sausages?</a>
+      </div>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
   <div id="container">
+  <h2>Makerthon!</h2>
   <div id="phone">
-  <div class="frame" style="display: block;" ng-repeat="photo in photos.slice().reverse()" >
-  <div class="pictures" style="display: block; background-image: url({{photo.url}})">
+  <div id="frame">
+  <img id="main_photo" src="{{showPhoto()}}" height="250" width="250">
+  <div id="sausagecirclecircle">
+  <div id="sausagecircle">
+  <img id="sausage_vote" src="http://www.clipartbest.com/cliparts/yco/KbB/ycoKbBdcE.png" width="60" height="60" ng-click="sausage()"/>
   </div>
   </div>
+  </div>
+  </div>
+  <div id="legscirclecircle">
+  <div id="legcircle">
+  <img id="legs_vote" src="http://i.imgur.com/x2Gs8Jz.png" width="60" height="60" ng-click="legs()"/>
+  </div>
+  </div>
+  </div>
+  </div>
+  <button id="phone::after" ng-click="reset()"></button>
+  </div><br><br><br><br>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Team Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of web development students working on this project like it's our full time job. Any amount of money given would help support, continue development and is greatly appreciated.</p>
 
 
-<!--
-    <div class="frame" style="display: block;">
-    <div class="pictures"  style="display: block; background-image: url(http://blogs.ocweekly.com/stickaforkinit/hot-dog-legs-2.jpg)"></div>
+
+        </div>
+      </div>
     </div>
-    <div class="frame"><div class="pictures" style="display: block; background-image: url(http://i8.cdnds.net/13/34/450x450/tumblr_mrfiwmaqqj1sftuuto1_500.jpg)"></div></div> -->
-    <!-- <div class="frame"><div class="pictures" style="display: block; background-image: url(https://40.media.tumblr.com/9441faef3cd5be727c2bc189255975df/tumblr_nkj4a1epoC1rzg2epo1_500.jpg)"></div></div> -->
+    <div class="footer-copyright">
+      <div class="container">
+      Made for <a class="orange-text text-lighten-3" href="http://makersacademy.com">Makers Academy</a>
+      </div>
     </div>
-  </div>
-  </div>
-  <br>
-  <button id="seb" ng-click="sausage()">click</button>
-</body>
+
+
+  </footer>
+
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
 
   </html>

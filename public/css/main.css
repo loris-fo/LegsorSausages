@@ -2,10 +2,16 @@
   font-family: tinderfont;
   src: url(tinder.ttf);
 }
-h1 {
+.brand-logo {
   font-family: tinderfont;
-  color: red;
 }
+
+h2 {
+  font-family: tinderfont;
+  text-align: center;
+}
+
+
 #container {
   width: 500px;
   margin: auto !important;
@@ -20,72 +26,75 @@ h1 {
   -ms-user-select: none;
   user-select: none;
 }
-.frame {
-  display: none;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  color: #fff;
-  padding: 10px;
-  width: 250px;
-  height: 250px;
-  top: 75px;
-  left: 27px;
+#main_photo{
   position: absolute;
-  cursor: hand;
-}
-.rotate-left {
-  transform: rotate(30deg) scale(0.8);
-  transition: 1s;
-  margin-left: 400px;
-  cursor: e-resize;
-  opacity: 0;
-}
-.rotate-right {
-  transform: rotate(-30deg) scale(0.8);
-  transition: 1s;
-  opacity: 0;
-  margin-left: -400px;
-  cursor: w-resize;
-}
-.pictures {
-  background: #222;
-  width: 230px;
-  height: 230px;
-  display: block;
-  margin-top: 10px;
-  margin-left: 10px;
-  background-size: 100% auto !important;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.sausages {
-  border-radius: 5px;
-  padding: 5px 10px;
-  border: 2px solid green;
-  color: green;
-  text-transform: uppercase;
-  font-size: 30px;
-  position: absolute;
-  top: 50px;
-  right: 40px;
-  text-shadow: none;
-}
-.legs {
-  border-radius: 5px;
-  padding: 5px 10px;
-  border: 2px solid red;
-  color: red;
-  text-transform: uppercase;
-  font-size: 30px;
-  position: absolute;
-  top: 50px;
+  top:30px;
   left: 40px;
-  text-shadow: none;
+  width: 230px;
+  height: 270px;
+
+  border-radius: 10px;
 }
-.title {
-  text-align: center;
+
+#frame{
+  position: absolute;
+  top: 60px;
+  left: 5px;
+  background-color: silver;
+  width: 310px;
+  height: 420px;
 }
+
+
+#sausage_vote{
+  position: absolute;
+}
+
+#sausagecircle{
+  position: absolute;;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  margin-left: 8px;
+  margin-top: 8px;
+  background-color:  #d3d3d3;
+}
+
+#sausagecirclecircle{
+  position: absolute;
+  top: 320px;
+  left: 190px;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+  height: 80px;
+  width: 80px;
+  }
+
+#legs_vote{
+  margin-left: 6.5px;
+  margin-bottom: 10px;
+}
+
+#legcircle{
+  position: absolute;;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  margin-left: 8px;
+  margin-top: 8px;
+  background-color:  #d3d3d3;
+}
+
+#legscirclecircle{
+  top: 470px;
+  position: absolute;
+  left: 140px;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+  height: 80px;
+  width: 80px;
+  }
+
 
 #phone {
     background: none repeat scroll 0 0 #dfdfdf;
