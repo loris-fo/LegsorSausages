@@ -1,4 +1,11 @@
-
+@font-face {
+  font-family: tinderfont;
+  src: url(tinder.ttf);
+}
+h1 {
+  font-family: tinderfont;
+  color: red;
+}
 #container {
   width: 500px;
   margin: auto !important;
