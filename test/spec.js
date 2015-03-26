@@ -9,15 +9,15 @@ describe('todoApp homepage', function() {
   });
 
   it("should have an image", function() {
-    expect(browser.isElementPresent(by.id("main_image"))).toBe(true);
+    expect(browser.isElementPresent(by.id("main_photo"))).toBe(true);
   });
 
     it("should have a legs button", function() {
-    expect(browser.isElementPresent(by.id("legs_button"))).toBe(true);
+    expect(browser.isElementPresent(by.id("legs_vote"))).toBe(true);
   });
 
   it("should have a sausages button", function(){
-    expect(browser.isElementPresent(by.id("sausages_button"))).toBe(true);
+    expect(browser.isElementPresent(by.id("sausage_vote"))).toBe(true);
   });
 
   it('should display a score', function(){
