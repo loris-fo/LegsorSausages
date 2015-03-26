@@ -45,6 +45,13 @@ h2 {
   height: 420px;
 }
 
+#scoreboard{
+  position: absolute;
+  font-family: tinderfont;
+  font-size: 36px;
+  left: 120%;
+}
+
 
 #sausage_vote{
   position: absolute;
@@ -94,7 +101,6 @@ h2 {
   height: 80px;
   width: 80px;
   }
-
 
 #phone {
     background: none repeat scroll 0 0 #dfdfdf;
