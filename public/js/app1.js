@@ -1,4 +1,4 @@
-var legsorSausages = angular.module('LegsorSausages', ['ngTouch']);
+var legsorSausages = angular.module('LegsorSausages', []);
 
 legsorSausages.controller('legsOrSausagesController', function($scope) {
 
