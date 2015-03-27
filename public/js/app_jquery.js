@@ -24,4 +24,18 @@ $('#legs_vote').click(function(){
   });
   angle-=360;
 })
+
+  $('#legs_vote').click(function(){
+    $( "#correctanswer" ).fadeIn()
+    $( "#correctanswer" ).fadeOut()
+    $( "#incorrectanswer" ).fadeIn()
+    $( "#incorrectanswer" ).fadeOut()
+  });
+    $('#sausage_vote').click(function(){
+    $( "#correctanswer" ).fadeIn()
+    $( "#correctanswer" ).fadeOut()
+    $( "#incorrectanswer" ).fadeIn()
+    $( "#incorrectanswer" ).fadeOut()
+  });
+
 });
