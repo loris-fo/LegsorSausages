@@ -163,3 +163,10 @@ h3 {
   margin-top: 50px;
   margin-left: 40px;
 }
+.block {
+  padding: 10px;
+
+  border: 1px solid black;
+
+  font-family: Helvetica;
+}
