@@ -10,9 +10,9 @@
     <script src="/js/app1.js"></script>
     <script src="/js/app_jquery.js"></script>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/materialize.css">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </head>
@@ -27,23 +27,33 @@
   <div class="section no-pad-bot" id="index-banner">
   <div id="container">
 
-  <h2>Makerthon!</h2>
+  <h3>Makerthon!</h3>
 
-  <div id="score">Score: {{score}}</div>
+  <div id="score" ng-show="final == 1">Score: {{score}}</div>
+  <div id="answercolor1">
+  <div id="correct" ng-show="answer == 0"><p id="correctanswer">CORRECT</p></div>
+  </div>
+  <div id="answercolor">
+  <div id="incorrect" ng-show="answer == 1"><p id="incorrectanswer">INCORRECT</p></div>
+  </div>
 
   <div id="phone">
     <div id="frame">
-  <img id="main_photo" src="{{showPhoto()}}" height="250" width="250">
+  <img id="main_photo" ng-show="view == 0" src="{{showPhoto()}}" height="250" width="250">
+  <div id="final_score" ng-show="view == 1">Your final score is:
+  <br>
+  <h1 align="center">{{score}}</h1>
+  </div>
     <div id="sausagecirclecircle">
       <div id="sausagecircle">
         <img id="sausage_vote" src="http://www.clipartbest.com/cliparts/yco/KbB/ycoKbBdcE.png" width="60" height="60" ng-click="sausage()"/>
       </div>
     </div>
     </div>
-  </div>
-  <div id="legscirclecircle">
+      <div id="legscirclecircle">
   <div id="legcircle">
   <img id="legs_vote" src="http://i.imgur.com/x2Gs8Jz.png" width="60" height="60" ng-click="legs()"/>
+  </div>
   </div>
   </div>
   </div>
@@ -57,8 +67,24 @@
           <h5 class="white-text">Team Bio</h5>
           <p class="grey-text text-lighten-4">We are a team of web development students working on this project like it's our full time job. Any amount of money given would help support, continue development and is greatly appreciated.</p>
         </div>
-      </div>
+            <div id="paypal">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="pires.sebastien@gmail.com">
+        <input type="hidden" name="lc" value="GB">
+        <input type="hidden" name="item_name" value="Makers Students">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
     </div>
+      </div>
+
+    </div>
+
     <div class="footer-copyright">
       <div class="container">
       Made for <a class="orange-text text-lighten-3" href="http://makersacademy.com">Makers Academy</a>
@@ -67,9 +93,6 @@
 
 
   </footer>
-
-
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

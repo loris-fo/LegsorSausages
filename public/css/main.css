@@ -6,7 +6,7 @@
   font-family: tinderfont;
 }
 
-h2 {
+h3 {
   font-family: tinderfont;
   text-align: center;
 }
@@ -19,12 +19,6 @@ h2 {
   height: 500px;
   position: relative;
   list-style-type: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 #main_photo{
   position: absolute;
@@ -32,8 +26,21 @@ h2 {
   left: 40px;
   width: 230px;
   height: 270px;
-
   border-radius: 10px;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+
+#final_score{
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  font-family: tinderfont;
+  font-size: 25px;
+  color: #ee6e73
 }
 
 #frame{
@@ -45,13 +52,35 @@ h2 {
   height: 420px;
 }
 
+#answercolor{
+  position: absolute;
+  left: -200px;
+  top: 250px;
+}
+#answercolor1{
+  position: absolute;
+  top: 250px;
+  left: 500px;
+}
+
+#correctanswer{
+  color: green;
+  font-family: tinderfont;
+  font-size: 36px;
+}
+
+#incorrectanswer{
+  color: red;
+  font-family: tinderfont;
+  font-size: 36px;
+}
+
 #score{
   position: absolute;
   font-family: tinderfont;
   font-size: 36px;
   left: 120%;
 }
-
 
 #sausage_vote{
   position: absolute;
@@ -93,9 +122,9 @@ h2 {
 }
 
 #legscirclecircle{
-  top: 470px;
+  top: 380px;
   position: absolute;
-  left: 140px;
+  left: 45px;
   border-radius: 50%;
   background-color: #dfdfdf;
   height: 80px;
@@ -111,6 +140,7 @@ h2 {
     position: relative;
     top: 10px;
     width: 320px;
+
 }
 #phone::before, #phone::after {
     background: none repeat scroll 0 0 #d3d3d3;
@@ -132,4 +162,16 @@ h2 {
     left: calc(50% - 20px);
     top: 30px;
     width: 50px;
+}
+#paypal {
+  position: absolute;
+  margin-top: 50px;
+  right: 350px;
+}
+.block {
+  padding: 10px;
+
+  border: 1px solid black;
+
+  font-family: Helvetica;
 }
