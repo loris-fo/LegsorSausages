@@ -29,7 +29,7 @@
 
   <h3>Makerthon!</h3>
 
-  <div id="score">Score: {{score}}</div>
+  <div id="score" ng-show="final == 1">Score: {{score}}</div>
   <div id="answercolor">
   <div id="correct" ng-show="answer == 0"><p id="correctanswer">CORRECT</p></div>
   <div id="incorrect" ng-show="answer == 1"><p id="incorrectanswer">FACK OFF</p></div>
@@ -48,12 +48,13 @@
       </div>
     </div>
     </div>
-  </div>
-  <div id="legscirclecircle">
+      <div id="legscirclecircle">
   <div id="legcircle">
   <img id="legs_vote" src="http://i.imgur.com/x2Gs8Jz.png" width="60" height="60" ng-click="legs()"/>
   </div>
   </div>
+  </div>
+
   </div>
   </div>
   <button id="phone::after" ng-click="reset()"></button>
