@@ -55,7 +55,12 @@ h3 {
 #answercolor{
   position: absolute;
   left: -200px;
-  top: 40px;
+  top: 250px;
+}
+#answercolor1{
+  position: absolute;
+  top: 250px;
+  left: 500px;
 }
 
 #correctanswer{
@@ -161,7 +166,7 @@ h3 {
 #paypal {
   position: absolute;
   margin-top: 50px;
-  margin-left: 40px;
+  right: 350px;
 }
 .block {
   padding: 10px;

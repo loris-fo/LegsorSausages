@@ -30,8 +30,10 @@
   <h3>Makerthon!</h3>
 
   <div id="score" ng-show="final == 1">Score: {{score}}</div>
-  <div id="answercolor">
+  <div id="answercolor1">
   <div id="correct" ng-show="answer == 0"><p id="correctanswer">CORRECT</p></div>
+  </div>
+  <div id="answercolor">
   <div id="incorrect" ng-show="answer == 1"><p id="incorrectanswer">INCORRECT</p></div>
   </div>
 
@@ -65,8 +67,24 @@
           <h5 class="white-text">Team Bio</h5>
           <p class="grey-text text-lighten-4">We are a team of web development students working on this project like it's our full time job. Any amount of money given would help support, continue development and is greatly appreciated.</p>
         </div>
-      </div>
+            <div id="paypal">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_donations">
+        <input type="hidden" name="business" value="pires.sebastien@gmail.com">
+        <input type="hidden" name="lc" value="GB">
+        <input type="hidden" name="item_name" value="Makers Students">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
     </div>
+      </div>
+
+    </div>
+
     <div class="footer-copyright">
       <div class="container">
       Made for <a class="orange-text text-lighten-3" href="http://makersacademy.com">Makers Academy</a>
