@@ -16,3 +16,4 @@ You can play the game directly here: [Legs or Sausages?](http://legsorsausages.h
 * Karma & Protractor
 * Grunt
 * Travis CI
+* Code Climate
